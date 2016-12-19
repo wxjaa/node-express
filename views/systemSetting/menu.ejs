@@ -443,7 +443,7 @@
         $("tr[parent-id='" + menuId + "']").toggleClass("hide");
         var menuArr = $("tr[parent-id='" + menuId + "']");
         show_hide(menuArr);
-        $(e.target).toggleClass("glyphicon-minus glyphicon-plus");
+        $(e.target).find("i").toggleClass("glyphicon-minus glyphicon-plus");
     }
     function show_hide(arr) {
 

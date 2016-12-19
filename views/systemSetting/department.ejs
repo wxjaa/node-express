@@ -251,7 +251,7 @@
         $("tr[parent-id='" + departmentId + "']").toggleClass("hide");
         var menuArr = $("tr[parent-id='" + departmentId + "']");
         show_hide(menuArr)
-        $(e.target).toggleClass("glyphicon-minus glyphicon-plus");
+        $(e.target).find("i").toggleClass("glyphicon-minus glyphicon-plus");
     }
     function show_hide(arr) {
 
