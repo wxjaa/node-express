@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>eKoders - Responsive Admin Theme</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/fonts.css">
+    <link rel="stylesheet" href="/assets/font-awesome/css/font-awesome.min.css">
+
+    <!-- PAGE LEVEL PLUGINS STYLES -->
+    <link href="/assets/css/plugins/daterangepicker/daterangepicker-bs3.css" rel="stylesheet">
+    <link href="/assets/css/plugins/morris/morris.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/plugins/bootstrap-datepicker/datepicker.css">
+    <!-- REQUIRE FOR SPEECH COMMANDS -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/plugins/gritter/jquery.gritter.css"/>
+
+    <!-- Tc core CSS -->
+    <link id="qstyle" rel="stylesheet" href="/assets/css/themes/style.css">
+
+
+    <!-- Add custom CSS here -->
+    <link rel="stylesheet" href="/assets/css/only-for-demos.css">
+
+    <!-- End custom CSS here -->
+
+    <!--[if lt IE 9]>
+    <script src="/assets/js/html5shiv.js"></script>
+    <script src="/assets/js/respond.min.js"></script>
+
+    <![endif]-->
+
+    <!--[if lte IE 8]>
+    <script src="/assets/js/plugins/easypiechart/easypiechart.ie-fix.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+<div id="wrapper">
+    <div id="main-container">
+        <!--顶部navbar开始-->
+        <% include navbar-top %>
+        <!--顶部navbar结束-->
+        <!--左侧navbar开始-->
+        <% include navbar-side %>
+        <!--左侧navbar结束-->
+        <div id="page-wrapper">
+            <!-- 在这里开始你的内容 -->
+            <%- body %>
+            <!-- 结束你的内容 -->
+
+            <!-- footer 开始 -->
+            <% include footer %>
+            <!-- footer 结束 -->
+            <!-- 回到顶部 开始 -->
+            <button type="button" id="back-to-top" class="btn btn-primary btn-sm back-to-top">
+                <i class="fa fa-angle-double-up icon-only bigger-110"></i>
+            </button>
+            <!-- 回到顶部 结束 -->
+        </div>
+    </div>
+</div>
+
+<!-- core JavaScript -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="/assets/js/plugins/pace/pace.min.js"></script>
+
+<!-- PAGE LEVEL PLUGINS JS -->
+<script src="/assets/js/plugins/footable/footable.min.js"></script>
+
+<script src="/assets/js/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="/assets/js/plugins/datatables/datatables.js"></script>
+<script src="/assets/js/plugins/datatables/datatables.responsive.js"></script>
+
+<!-- Themes Core Scripts -->
+<script src="/assets/js/main.js"></script>
+
+<!-- REQUIRE FOR SPEECH COMMANDS -->
+<script src="/assets/js/speech-commands.js"></script>
+<script src="/assets/js/plugins/gritter/jquery.gritter.min.js"></script>
+
+<!-- initial page level scripts for examples -->
+<script src="/assets/js/plugins/slimscroll/jquery.slimscroll.init.js"></script>
+<script src="/assets/js/plugins/footable/footable.init.js"></script>
+<script src="/assets/js/plugins/datatables/datatables.init.js"></script>
+
+</body>
+</html>

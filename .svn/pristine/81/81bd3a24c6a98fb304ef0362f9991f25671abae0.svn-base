@@ -1,0 +1,39 @@
+var express = require('express');
+const co = require("co");
+const uuid = require("uuid");
+var router = express.Router();
+var db = require('../utils/db.js');
+
+
+//É¾³ý²Ëµ¥
+router.get("/remove", function (req, res, next) {
+    var id = req.query.id;
+    var result={
+        status:-1,
+        data:null
+    };
+    if (id) {
+        db.department.destroy({
+            where: {
+                departmentId: id
+            }
+        }).then(function (data) {
+            if (data>= 1) {
+                result.status=1;
+                result.data=data;
+            }else{
+                result.status=0;
+            }
+            res.end(JSON.stringify(result))
+        }, function (err) {
+            result.data = err;
+            result.state = 10;
+            res.end(JSON.stringify(result));
+            throw new Error(err.message);
+        })
+    }else{
+        result.state = 10;
+        res.end(JSON.stringify(result));
+    }
+})
+module.exports = router;
