@@ -245,9 +245,8 @@
     var departmentId;
     function showAndHideMenu(e) {
         e = e || window.event;
-       // e.stopPropagation();
+        e.stopPropagation();
         e.preventDefault();
-        console.log(e.target);
         var departmentId = $(e.currentTarget).eq(0).parent().parent().data("id");
         console.log(departmentId);
         $("tr[parent-id='" + departmentId + "']").toggleClass("hide");

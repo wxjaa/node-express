@@ -245,15 +245,13 @@
     var departmentId;
     function showAndHideMenu(e) {
         e = e || window.event;
-       // e.stopPropagation();
-        e.preventDefault();
-        console.log(e.target);
-        var departmentId = $(e.currentTarget).eq(0).parent().parent().data("id");
-        console.log(departmentId);
+        e.stopPropagation;
+        e.defaultPrevented;
+        var departmentId = $(e.target).eq(0).parent().parent().parent().data("id");
         $("tr[parent-id='" + departmentId + "']").toggleClass("hide");
         var menuArr = $("tr[parent-id='" + departmentId + "']");
         show_hide(menuArr)
-        $(e.currentTarget).find("i").toggleClass("glyphicon-minus glyphicon-plus");
+        $(e.target).find("i").toggleClass("glyphicon-minus glyphicon-plus");
     }
     function show_hide(arr) {
 
